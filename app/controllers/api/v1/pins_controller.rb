@@ -23,8 +23,13 @@ class Api::V1::PinsController < ApplicationController
       email = request.headers['X-User-Email'].to_s
       token = request.headers['X-Api-Token'].to_s
       user = User.find_by_email(email)
-      if user.api_token == token
-        sign_in user
+      
+      if !user.nil? 
+        if user.api_token == token
+          sign_in user
+        end
+      else
+        warden.custom_failure! if performed?
       end
     end
 end
