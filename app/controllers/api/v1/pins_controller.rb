@@ -29,7 +29,7 @@ class Api::V1::PinsController < ApplicationController
           sign_in user
         end
       else
-        warden.custom_failure! if performed?
+        head (:unauthorized)
       end
     end
 end
