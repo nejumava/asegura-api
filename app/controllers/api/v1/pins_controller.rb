@@ -25,9 +25,7 @@ class Api::V1::PinsController < ApplicationController
       user = User.find_by_email(email)
       
       if !user.nil? 
-        if user.api_token == token
-          sign_in user
-        else
+        if user.api_token != token
           head (:unauthorized)
         end
       else
