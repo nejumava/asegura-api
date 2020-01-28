@@ -1,0 +1,52 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "masonry-transitions";
+
+body {
+  background: #E9E9E9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+nav {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  .navbar-brand {
+    color: #BD1E23 !important;
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#pins {
+  margin: 0 auto;
+
+  .box {
+    margin: 10px;
+    width: 350px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+    border-radius: 7px;
+    text-align: center;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    h2 {
+      font-size: 22px;
+      margin: 0;
+      padding: 25px 10px;
+      a {
+        color: #474747;
+      }
+    }
+    .user {
+      font-size: 12px;
+      border-top: 1px solid #EAEAEA;
+      padding: 15px;
+      margin: 0;
+    }
+  }
+}

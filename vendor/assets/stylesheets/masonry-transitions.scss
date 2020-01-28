@@ -1,0 +1,18 @@
+.transitions-enabled.masonry,
+.transitions-enabled.masonry .masonry-brick {
+  transition-duration: 0.7s;
+}
+
+.transitions-enabled.masonry {
+  transition-property: height, width;
+}
+
+.transitions-enabled.masonry  .masonry-brick {
+  transition-property: left, right, top;
+}
+
+
+/* disable transitions on container */
+.transitions-enabled.infinite-scroll.masonry {
+  transition-property: none;
+}
