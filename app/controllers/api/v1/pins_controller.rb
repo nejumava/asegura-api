@@ -27,6 +27,8 @@ class Api::V1::PinsController < ApplicationController
       if !user.nil? 
         if user.api_token == token
           sign_in user
+        else
+          head (:unauthorized)
         end
       else
         head (:unauthorized)
